@@ -4,7 +4,7 @@ setInterval(async () => {
   try {
     const res = await fetch('/get-latest-images');
     const latestImages = await res.json();
-    const gallery = document.getElementById('gallery');
+    const gallery = document.querySelector('.gallery'); // fixed selector
 
     // Remove images that are no longer in the list
     currentImages.forEach(src => {
