@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const res = await fetch('/get-latest-images');
       const latestImages = await res.json();
-      const gallery = document.querySelector('.gallery'); // use class since your div uses class="gallery"
+      const gallery = document.querySelector('.gallery');
 
       // Remove images that are no longer in the list
       currentImages.forEach(src => {
